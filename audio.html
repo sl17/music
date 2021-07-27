@@ -13,7 +13,7 @@
         var AudioContext = AudioContext || webkitAudioContext;
         var context = new AudioContext;
         //加载媒体
-        var audio = new Audio("http://m10.music.126.net/20210727142303/2b66452e24ea846a9a64923520a599ca/ymusic/16b4/ecec/17b7/cab5f9220b43ac5b13d6496db81935dd.mp3");
+        var audio = new Audio("../audio/sofia.mp3");
         //创建节点
         var source = context.createMediaElementSource(audio);
         var analyser = context.createAnalyser();
