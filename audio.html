@@ -13,7 +13,7 @@
         var AudioContext = AudioContext || webkitAudioContext;
         var context = new AudioContext;
         //加载媒体
-        var audio = new Audio("../audio/sofia.mp3");
+        var audio = new Audio("./audio/sofia.mp3");
         //创建节点
         var source = context.createMediaElementSource(audio);
         var analyser = context.createAnalyser();
