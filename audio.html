@@ -9,8 +9,9 @@
         var wrap = document.getElementById("wrap");
         var cxt = wrap.getContext("2d");
         //获取API
-        var AudioContext = AudioContext || webkitAudioContext;
-        var context = new AudioContext;
+        window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+        //var AudioContext = AudioContext || webkitAudioContext;
+        var context = new window.AudioContext();
         //加载媒体
         var audio = new Audio("./audio/sofia.mp3");
         //创建节点
@@ -55,7 +56,7 @@
             //画一个小圆，将线条覆盖
             cxt.beginPath();
             cxt.lineWidth = 1;
-            cxt.arc(300, 300, 200, 0, 2 * Math.PI, false);
+            cxt.arc(120, 120, 100, 0, 2 * Math.PI, false);
             cxt.fillStyle = "#fff";
             cxt.stroke();
             cxt.fill();
