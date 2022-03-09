@@ -29,7 +29,7 @@
         (function drawSpectrum() {
             analyser.getByteFrequencyData(output);//获取频域数据
             cxt.clearRect(0, 0, wrap.width, wrap.height);
-            var gradient = cxt.createLinearGradient(0, 0, 216, 216);
+            var gradient = cxt.createLinearGradient(0, 0, 416, 416);
 			gradient.addColorStop("0.1", "red");
 			gradient.addColorStop("0.25", "pink");
 			gradient.addColorStop("0.3", "magenta");
@@ -43,7 +43,7 @@
                 cxt.beginPath();
                 cxt.lineWidth = 1;
                 cxt.moveTo(120, 120);
-                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (200 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (200 + value) + 120));
+                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 120));
                 cxt.stroke();
                 //绘制右半边
                 cxt.beginPath();
@@ -62,7 +62,7 @@
             cxt.fill();
             //将缓冲区的数据绘制到Canvas上 
             analyser.getByteTimeDomainData(output2);
-            var height = 100, width = 400;
+            var height = 100, width = 200;
             cxt.beginPath();
             for (var i = 0; i < width; i++) {
                 cxt.lineTo(i + 100, 300 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
