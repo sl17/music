@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <header name = "Access-Control-Allow-Origin" value = "*" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC</title>
+    <style>
+        *{margin: 0;padding: 0;font-weight: 100;}
+        body{padding: 24px;}
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <button id="btn">sdsd </button>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.onclick = function(){
+            let audio = new Audio()
+            audio.src = './2.flac';
+            audio.play()
+            window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+            var context = new window.AudioContext();
+            var source = context.createMediaElementSource(audio);
+            var analyser = context.createAnalyser();
+            source.connect(analyser);
+            analyser.connect(context.destination);
+            var output = new Uint8Array(361);
+            var length = analyser.frequencyBinCount * 44100 / context.sampleRate | 0;
+            var output2 = new Uint8Array(length);
+            console.log(length);
+            (function draw(){
+                analyser.getByteFrequencyData(output);
+                analyser.getByteTimeDomainData(output2);
+                for (let index = 0; index < output.length; index++) {
+                    let value = output[index] / 10;
+                    console.log(value);
+                }
+                requestAnimationFrame(draw);
+    
+            })()
+        };
+    </script>
+</body>
+</html>
