@@ -15,7 +15,7 @@
 
         body,
         html {
-            /* background-image: linear-gradient(0deg, #ddd, #535353); */
+            background-image: linear-gradient(0deg, #3ba187, #000000);
             height: 100%;
             overflow: hidden;
         }
@@ -31,7 +31,7 @@
             position: relative;
             will-change: background;
             display: inline-block;
-            box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2) inset;
         }
 
         .wrap p {
@@ -44,7 +44,7 @@
             top: 0;
             bottom: 0;
             border-radius: 50px;
-            background: #ddd;
+            background: #fff;
             cursor: pointer;
         }
 
@@ -56,7 +56,7 @@
             width: 5px;
             height: 20px;
             border-radius: 3px;
-            background-color: #000;
+            background-color: #225e4e;
         }
 
         .wrap p.play::before {
@@ -67,7 +67,7 @@
             width: 5px;
             height: 20px;
             border-radius: 3px;
-            background-color: #000;
+            background-color: #225e4e;
         }
 
         .wrap p.stop::before {
@@ -78,7 +78,7 @@
             width: 0;
             height: 0;
             border-top: 12px solid transparent;
-            border-left: 16px solid #000;
+            border-left: 16px solid #225e4e;
             border-bottom: 12px solid transparent;
             border-radius: 6px/4px;
         }
@@ -87,9 +87,9 @@
             position: fixed;
             height: 50px;
             width: 20px;
-            background: repeating-linear-gradient(#dddddd, #dddddd 1px, #000 2px, #9b9b9b 4px);
+            background: repeating-linear-gradient(#dddddd, #dddddd 1px, #000 2px, #b1b1b1 4px);
             border-radius: 50px;
-            box-shadow: 1px 1px 8px 0px #979797, 2px 2px 2px 0px #c9c9c9 inset, -2px 2px 2px 0px #c9c9c9 inset, 0px -2px 2px 0px #c9c9c9 inset;
+            box-shadow: 1px 1px 5px 0px #060606, 2px 2px 2px 0px #d1d1d1 inset, -2px 2px 2px 0px #4a4848 inset, 0px -2px 2px 0px #343333 inset;
             right: 5px;
             top: 50%;
         }
@@ -100,13 +100,14 @@
             top: 25%;
             width: 40%;
             height: 50%;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(255, 2555, 255, 0.6);
             border-radius: 8px 3px 3px 8px;
             padding: 20px 0;
             z-index: 9;
             display: none;
             opacity: 0;
             word-break: break-all;
+            box-shadow: 0px 5px 7px 0 #1a1a1a;
         }
 
         .musiclist::after {
@@ -115,9 +116,9 @@
             margin: auto;
             top: 0;
             bottom: 0;
-            right: -20px;
+            right: -21px;
             border-top: 28vh solid transparent;
-            border-left: 3vh solid rgba(0, 0, 0, 0.2);
+            border-left: 3vh solid rgba(0, 0, 0, 0.3);
             border-bottom: 28vh solid transparent;
         }
 
@@ -156,16 +157,17 @@
             width: 90%;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: #013c2c;
             margin-left: 5%;
         }
 
         .musucType {
             display: inline-block;
-            width: 50px;
-            height: 50px;
+            width: 46px;
+            height: 46px;
             border-radius: 50px;
             position: relative;
-            background-color: #d3d3d3;
+            background-color: #fff;
             position: relative;
         }
 
@@ -176,35 +178,35 @@
         .musucType.one span {
             width: 18px;
             height: 12px;
-            top: 15px;
-            left: 12px;
-            border: 3px sienna solid;
+            top: 14px;
+            left: 11px;
+            border: 3px #225e4e solid;
             border-radius: 10px 0 10px 0;
             line-height: 11px;
             text-align: center;
             font-size: 13px;
             font-weight: bold;
-            color: #833b19;
+            color: #225e4e;
         }
 
         .musucType.row span {
             width: 20px;
             height: 11px;
-            top: 16px;
-            left: 15px;
-            border-top: 3px sienna solid;
-            border-bottom: 3px sienna solid;
-            background-image: linear-gradient(0deg, transparent 4px, sienna 4px 7px, transparent 7px);
+            top: 14px;
+            left: 13px;
+            border-top: 3px #225e4e solid;
+            border-bottom: 3px #225e4e solid;
+            background-image: linear-gradient(0deg, transparent 4px, #225e4e 4px 7px, transparent 7px);
             font-size: 0;
         }
 
         .musucType.ran span {
             width: 10px;
             height: 11px;
-            top: 16px;
-            left: 22px;
+            top: 15px;
+            left: 20px;
             border-radius: 20px 0 0 20px;
-            border: 3px sienna solid;
+            border: 3px #225e4e solid;
             border-right: none;
             font-size: 0;
         }
@@ -215,7 +217,7 @@
             top: -6px;
             right: -2px;
             border-top: 5px solid transparent;
-            border-left: 6px sienna solid;
+            border-left: 6px #225e4e solid;
             border-bottom: 5px solid transparent;
         }
 
@@ -223,10 +225,10 @@
             position: absolute;
             width: 6px;
             height: 11px;
-            top: 16px;
-            left: 15px;
+            top: 15px;
+            left: 13px;
             border-radius: 0 20px 20px 0;
-            border: 3px sienna solid;
+            border: 3px #225e4e solid;
             border-left: none;
         }
 
@@ -236,25 +238,41 @@
             bottom: -6px;
             right: -2px;
             border-top: 5px solid transparent;
-            border-left: 6px sienna solid;
+            border-left: 6px #225e4e solid;
             border-bottom: 5px solid transparent;
+        }
+
+        .b-wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        .music-name {
+            flex: 1;
+            color: #3ba187;
+            margin: 0 8px;
         }
     </style>
 </head>
 
 <body>
+
     <div class="listBtn" id="listBtn"></div>
     <div class="musiclist" id="musiclist"></div>
-    <div class="wrap" id="wrap">
-        <p id="operateBtn" class="stop" onclick="operate()"></p>
-    </div>
-    <div class="musucType row" id="musucType" onclick="setMusicType()">
-        <span>1</span><i></i>
+    <div class="b-wrap">
+        <div class="wrap" id="wrap">
+            <p id="operateBtn" class="stop" onclick="operate()"></p>
+        </div>
+        <div class="music-name" id="music-name"></div>
+        <div class="musucType row" id="musucType" onclick="setMusicType()">
+            <span>1</span><i></i>
+        </div>
     </div>
 
     <script>
         const wrap = document.getElementById('wrap');
         const operateBtn = document.getElementById('operateBtn');
+        const musucName = document.getElementById('music-name');
         const audio = new Audio();
         const list = [
             { id: 1, name: 'In the eyes-江映东', type: 1 },
@@ -299,6 +317,16 @@
             { id: 40, name: '月半小夜曲-李克勤', type: 1 },
             { id: 41, name: '最幸福的人-曾春年', type: 1 },
             { id: 42, name: '可能-程响', type: 1 },
+            { id: 43, name: 'MY ALL-滨崎あゆみ', type: 1 },
+            { id: 44, name: '曾经的你-许巍', type: 1 },
+            { id: 45, name: '匆匆那年-王菲', type: 1 },
+            { id: 46, name: '大鱼-周深', type: 1 },
+            { id: 47, name: '关不上的窗-周传雄', type: 1 },
+            { id: 48, name: '那些花儿-朴树', type: 1 },
+            { id: 49, name: '平凡之路-朴树', type: 1 },
+            { id: 50, name: '人间烟火-程响', type: 1 },
+            { id: 51, name: '生如夏花-朴树', type: 1 },
+            { id: 52, name: '像风一样自由-许巍', type: 1 },
         ];
         const audioObj = {
             audioStatus: 0,//0 停止   1 播放；
@@ -321,6 +349,7 @@
         function operate(id) {
             audioObj.auID = id ? id : audioObj.auID;
             let aObj = list.filter(item => item.id == audioObj.auID)[0];
+            musucName.innerText = aObj.name
             const aType = { 1: '.mp3', 2: '.flac' }
             audio.src = audioObj.src + aObj.name + aType[aObj.type];
             audio.currentTime = id ? 0 : audioObj.currentTime;
@@ -336,7 +365,7 @@
                 audio.addEventListener("timeupdate", function () {
                     audioObj.currentTime = audio.currentTime;
                     let num = audio.currentTime / audio.duration * 100;
-                    wrap.style.background = `conic-gradient(from -0deg, red 0% ${num}%, transparent ${num + 0.1}% 100%)`;
+                    wrap.style.background = `conic-gradient(from -0deg, #2b7764 0% ${num}%, transparent ${num + 0.1}% 100%)`;
                 });
             }
         }
@@ -415,6 +444,9 @@
                 musucType.classList = ['musucType one'];
             }
         }
+
+
+
 
     </script>
 </body>
