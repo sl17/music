@@ -85,7 +85,7 @@
 
         .musiclist {
             position: fixed;
-            right: 0px;
+            right: -150px;
             top: 25%;
             width: 40%;
             height: 50%;
@@ -93,8 +93,6 @@
             border-radius: 8px 0px 0px 8px;
             padding: 20px 0;
             z-index: 9;
-            display: none;
-            opacity: 0;
             word-break: break-all;
             box-shadow: 0px 5px 7px 0 #1a1a1a;
         }
@@ -107,11 +105,11 @@
 
         @keyframes move {
             0% {
-                opacity: 0;
+                right: -150px;
             }
 
             100% {
-                opacity: 1;
+                right: 0px;
             }
         }
 
@@ -121,29 +119,29 @@
             overflow-y: auto;
         }
 
-        .listBtn {
-            position: fixed;
+        .musiclist>div.listBtn {
+            position: absolute;
             width: 20px;
             height: 40px;
-            right: 0px;
+            left: -20px;
             border-radius: 20px 0 0 20px;
             background-color: rgb(255 255 255 / 10%);
-            top: 50%;
+            top: 45%;
         }
 
-        .listBtn.open {
+        .musiclist>div.listBtn.open {
             z-index: 11;
             right: 150px;
             background-color:  rgba(255, 2555, 255, 0.6);
             animation: move 0.4s linear 1 forwards;
         }
 
-        .listBtn.open::after {
+        .musiclist>div.listBtn.open::after {
             transform: rotate(135deg);
             left: 4px;
         }
 
-        .listBtn::after {
+        .musiclist>div.listBtn::after {
             position: absolute;
             content: '';
             top: 14px;
@@ -262,7 +260,7 @@
 
 <body>
 
-    <div class="listBtn" id="listBtn"></div>
+    
     <div class="musiclist" id="musiclist">
     </div>
     <div class="b-wrap">
@@ -350,7 +348,7 @@
             const element = list[index];
             str += `<p data-id='${element.id}'>${element.name}</p>`
         }
-        str += '</div></div>';
+        str += '</div></div><div class="listBtn" id="listBtn"></div>';
         musiclist.innerHTML = str;
         // 操作
         function operate(id) {
