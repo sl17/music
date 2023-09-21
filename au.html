@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: 100;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body,
+        html {
+            /* background-image: linear-gradient(0deg, #ddd, #535353); */
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            padding: 24px;
+        }
+
+        .wrap {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            position: relative;
+            will-change: background;
+            display: inline-block;
+            box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .wrap p {
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 50px;
+            background: #ddd;
+            cursor: pointer;
+        }
+
+        .wrap p.play::after {
+            position: absolute;
+            top: 11px;
+            left: 25px;
+            content: '';
+            width: 5px;
+            height: 20px;
+            border-radius: 3px;
+            background-color: #000;
+        }
+
+        .wrap p.play::before {
+            position: absolute;
+            top: 11px;
+            left: 13px;
+            content: '';
+            width: 5px;
+            height: 20px;
+            border-radius: 3px;
+            background-color: #000;
+        }
+
+        .wrap p.stop::before {
+            position: absolute;
+            top: 10px;
+            left: 16px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-left: 16px solid #000;
+            border-bottom: 12px solid transparent;
+            border-radius: 6px/4px;
+        }
+
+        .listBtn {
+            position: fixed;
+            height: 50px;
+            width: 20px;
+            background: repeating-linear-gradient(#dddddd, #dddddd 1px, #000 2px, #9b9b9b 4px);
+            border-radius: 50px;
+            box-shadow: 1px 1px 8px 0px #979797, 2px 2px 2px 0px #c9c9c9 inset, -2px 2px 2px 0px #c9c9c9 inset, 0px -2px 2px 0px #c9c9c9 inset;
+            right: 5px;
+            top: 50%;
+        }
+
+        .musiclist {
+            position: fixed;
+            right: 45px;
+            top: 25%;
+            width: 40%;
+            height: 50%;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px 3px 3px 8px;
+            padding: 20px 0;
+            z-index: 9;
+            display: none;
+            opacity: 0;
+            word-break: break-all;
+        }
+
+        .musiclist::after {
+            content: '';
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: -20px;
+            border-top: 28vh solid transparent;
+            border-left: 3vh solid rgba(0, 0, 0, 0.2);
+            border-bottom: 28vh solid transparent;
+        }
+
+        .musiclist.show {
+            display: block;
+            animation: move 0.4s linear 1 forwards;
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .musiclist>div {
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .musiclist>div>div {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+
+        .musiclist p {
+            font-size: 14px;
+            line-height: 26px;
+            height: 26px;
+            width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 5%;
+        }
+
+        .musucType {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            position: relative;
+            background-color: #d3d3d3;
+            position: relative;
+        }
+
+        .musucType span {
+            position: absolute;
+        }
+
+        .musucType.one span {
+            width: 18px;
+            height: 12px;
+            top: 15px;
+            left: 12px;
+            border: 3px sienna solid;
+            border-radius: 10px 0 10px 0;
+            line-height: 11px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #833b19;
+        }
+
+        .musucType.row span {
+            width: 20px;
+            height: 11px;
+            top: 16px;
+            left: 15px;
+            border-top: 3px sienna solid;
+            border-bottom: 3px sienna solid;
+            background-image: linear-gradient(0deg, transparent 4px, sienna 4px 7px, transparent 7px);
+            font-size: 0;
+        }
+
+        .musucType.ran span {
+            width: 10px;
+            height: 11px;
+            top: 16px;
+            left: 22px;
+            border-radius: 20px 0 0 20px;
+            border: 3px sienna solid;
+            border-right: none;
+            font-size: 0;
+        }
+
+        .musucType.ran span::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            right: -2px;
+            border-top: 5px solid transparent;
+            border-left: 6px sienna solid;
+            border-bottom: 5px solid transparent;
+        }
+
+        .musucType.ran i {
+            position: absolute;
+            width: 6px;
+            height: 11px;
+            top: 16px;
+            left: 15px;
+            border-radius: 0 20px 20px 0;
+            border: 3px sienna solid;
+            border-left: none;
+        }
+
+        .musucType.ran span::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: -2px;
+            border-top: 5px solid transparent;
+            border-left: 6px sienna solid;
+            border-bottom: 5px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="listBtn" id="listBtn"></div>
+    <div class="musiclist" id="musiclist"></div>
+    <div class="wrap" id="wrap">
+        <p id="operateBtn" class="stop" onclick="operate()"></p>
+    </div>
+    <div class="musucType row" id="musucType" onclick="setMusicType()">
+        <span>1</span><i></i>
+    </div>
+
+    <script>
+        const wrap = document.getElementById('wrap');
+        const operateBtn = document.getElementById('operateBtn');
+        const audio = new Audio();
+        const list = [
+            { id: 1, name: 'In the eyes-江映东', type: 1 },
+            { id: 2, name: 'そばにいるね-青山テルマ', type: 1 },
+            { id: 3, name: '爱你-王心凌', type: 1 },
+            { id: 4, name: '爱情转移-陈奕迅', type: 1 },
+            { id: 5, name: '白狐-陈瑞', type: 1 },
+            { id: 6, name: '不再犹豫-Beyond', type: 1 },
+            { id: 7, name: '成全-刘若英', type: 1 },
+            { id: 8, name: '传奇-王菲', type: 1 },
+            { id: 9, name: '当爱在靠近-刘若英', type: 1 },
+            { id: 10, name: '第一次爱的人-王心凌', type: 1 },
+            { id: 11, name: '丁香花-唐磊', type: 1 },
+            { id: 12, name: '冬天的秘密-周传雄', type: 1 },
+            { id: 13, name: '高原红DJ', type: 1 },
+            { id: 14, name: '光辉岁月-Beyond', type: 1 },
+            { id: 15, name: '国际歌-马备', type: 1 },
+            { id: 16, name: '红日-李克勤', type: 1 },
+            { id: 17, name: '红颜-胡彦斌', type: 1 },
+            { id: 18, name: '后来-刘若英', type: 1 },
+            { id: 19, name: '寂寞在唱歌-阿桑', type: 1 },
+            { id: 20, name: '江南-林俊杰', type: 1 },
+            { id: 21, name: '可可托海的牧羊人-王琪', type: 1 },
+            { id: 22, name: '没那么简单-黄小琥', type: 1 },
+            { id: 23, name: '美人鱼-林俊杰', type: 1 },
+            { id: 24, name: '披着羊皮的狼-刀郎', type: 1 },
+            { id: 25, name: '千里之外-周杰伦', type: 1 },
+            { id: 26, name: '求佛-誓言', type: 1 },
+            { id: 27, name: '逝去日子-Beyond', type: 1 },
+            { id: 28, name: '同桌的你-老狼', type: 1 },
+            { id: 29, name: '西海情歌-刀郎', type: 1 },
+            { id: 30, name: '香水有毒-胡杨林', type: 1 },
+            { id: 31, name: '像我这样的人-毛不易', type: 1 },
+            { id: 32, name: '消愁-毛不易', type: 1 },
+            { id: 33, name: '心醉-希亚', type: 1 },
+            { id: 34, name: '星星点灯-郑智化', type: 1 },
+            { id: 35, name: '夜的第七章-周杰伦', type: 1 },
+            { id: 36, name: '一定要爱你-田一龙', type: 1 },
+            { id: 37, name: '一千年以后-林俊杰', type: 1 },
+            { id: 38, name: '一生有你-水木年华', type: 1 },
+            { id: 39, name: '一万个理由-郑源', type: 1 },
+            { id: 40, name: '月半小夜曲-李克勤', type: 1 },
+            { id: 41, name: '最幸福的人-曾春年', type: 1 },
+            { id: 42, name: '可能-程响', type: 1 },
+        ];
+        const audioObj = {
+            audioStatus: 0,//0 停止   1 播放；
+            currentTime: 0,//当前播放音乐时间
+            src: './au/',//播放资源
+            auID: 1,
+            playType: 0,//播放模式 0 顺序  1 乱序  2 单曲
+            tabsClass: 0
+        }
+        // 拖动列表
+        const musiclist = document.getElementById('musiclist');
+        let str = '<div id="sw-musiclist"><div id="sm-musiclist">';
+        for (let index = 0; index < list.length; index++) {
+            const element = list[index];
+            str += `<p data-id='${element.id}'>${element.name}</p>`
+        }
+        str += '</div></div>';
+        musiclist.innerHTML = str;
+        // 操作
+        function operate(id) {
+            audioObj.auID = id ? id : audioObj.auID;
+            let aObj = list.filter(item => item.id == audioObj.auID)[0];
+            const aType = { 1: '.mp3', 2: '.flac' }
+            audio.src = audioObj.src + aObj.name + aType[aObj.type];
+            audio.currentTime = id ? 0 : audioObj.currentTime;
+            audioObj.audioStatus = id ? 0 : audioObj.audioStatus;
+            if (audioObj.audioStatus) {
+                audio.pause();
+                audioObj.audioStatus = 0;
+                operateBtn.className = 'stop';
+            } else {
+                audio.play();
+                audioObj.audioStatus = 1;
+                operateBtn.className = 'play';
+                audio.addEventListener("timeupdate", function () {
+                    audioObj.currentTime = audio.currentTime;
+                    let num = audio.currentTime / audio.duration * 100;
+                    wrap.style.background = `conic-gradient(from -0deg, red 0% ${num}%, transparent ${num + 0.1}% 100%)`;
+                });
+            }
+        }
+        // 音乐结束后
+        audio.addEventListener("ended", function () {
+            audioObj.audioStatus = 0;
+            audioObj.currentTime = 0;
+            operateBtn.className = 'stop';
+            if (audioObj.playType == 0) {
+                audioObj.auID += 1;
+                if (audioObj.auID == list.length) {
+                    audioObj.auID = 1;
+                }
+            } else if (audioObj.playType == 1) {
+                audioObj.auID = getRNum(1, (list.length - 1));
+            } else {
+                audioObj.auID = audioObj.auID;
+            }
+            operate();
+        }, false);
+        // 随机函数
+        function getRNum(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        // 拖动按钮+事件
+        const listBtn = document.getElementById('listBtn');
+        const swMusiclist = document.getElementById('sw-musiclist');
+        const smMusiclist = document.getElementById('sm-musiclist');
+        listBtn.addEventListener('touchstart', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            musiclist.classList.add('show')
+            let startTarget = e.targetTouches && e.targetTouches[0];
+            const startObj = {
+                y: startTarget.clientY,
+                domHeight: listBtn.clientHeight,
+                domTop: listBtn.offsetTop,
+                winHeight: window.screen.height,
+                smListH: smMusiclist.clientHeight,
+                swMusiH: swMusiclist.clientHeight
+            }
+            listBtn.addEventListener('touchmove', function (ev) {
+                ev.preventDefault();
+                let moveTarget = ev.targetTouches && ev.targetTouches[0];
+                const moveObj = {
+                    y: moveTarget.clientY,
+                }
+                let domOftop = moveObj.y - (startObj.y - startObj.domTop);
+                if (domOftop > 0 && domOftop < startObj.winHeight - startObj.domHeight) {
+                    listBtn.style.top = domOftop + 'px';
+                    smMusiclist.style.top = -(startObj.smListH - startObj.swMusiH) / (startObj.winHeight - startObj.domHeight) * domOftop + 'px'
+                }
+            })
+        }, false)
+        listBtn.addEventListener('touchend', function () {
+            setTimeout(() => {
+                musiclist.classList.remove('show');
+            }, 2000)
+        })
+        // 点击列表播放选择歌曲
+        const listItem = document.querySelectorAll('#sm-musiclist p');
+        for (let index = 0; index < listItem.length; index++) {
+            listItem[index].onclick = function () {
+                operate(this.getAttribute('data-id'));
+            };
+        }
+        const musucType = document.getElementById('musucType');
+        function setMusicType() {
+            audioObj.tabsClass++;
+            audioObj.playType = audioObj.tabsClass % 3;
+            if (audioObj.playType == 0) {
+                musucType.classList = ['musucType row'];
+            } else if (audioObj.playType == 1) {
+                musucType.classList = ['musucType ran'];
+            } else {
+                musucType.classList = ['musucType one'];
+            }
+        }
+
+    </script>
+</body>
+
+</html>
