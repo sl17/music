@@ -131,7 +131,7 @@
 
         .musiclist>div.listBtn.open {
             z-index: 11;
-            background-color:  rgba(255, 2555, 255, 0.6);
+            background-color: rgba(255, 2555, 255, 0.6);
             animation: move 0.4s linear 1 forwards;
         }
 
@@ -163,8 +163,9 @@
             margin-left: 5%;
         }
 
-        .musucType {
-            display: inline-block;
+        .musucType,
+        .leftBtn,
+        .rightBtn {
             width: 46px;
             height: 46px;
             border-radius: 50px;
@@ -192,14 +193,64 @@
         }
 
         .musucType.row span {
-            width: 20px;
-            height: 11px;
-            top: 14px;
-            left: 13px;
-            border-top: 3px #225e4e solid;
-            border-bottom: 3px #225e4e solid;
-            background-image: linear-gradient(0deg, transparent 4px, #225e4e 4px 7px, transparent 7px);
+            width: 18px;
+            height: 18px;
+            top: 11px;
+            left: 11px;
+            border-radius: 20px;
+            border: 3px #225e4e solid;
             font-size: 0;
+        }
+
+        .musucType.row span::after {
+            content: '';
+            position: absolute;
+            top: 7px;
+            right: -6px;
+            border-left: 5px solid transparent;
+            border-top: 6px #225e4e solid;
+            border-right: 5px solid transparent;
+        }
+
+        .musucType.row span::before {
+            content: '';
+            position: absolute;
+            top: 7px;
+            right: -8px;
+            border-left: 7px solid transparent;
+            border-top: 8px #ffffff solid;
+            border-right: 7px solid transparent;
+        }
+
+        .musucType.row i {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 11px;
+            left: 11px;
+            border-radius: 20px;
+            border: 3px transparent solid;
+            font-size: 0;
+        }
+
+        .musucType.row i::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -6px;
+            border-left: 5px solid transparent;
+            border-bottom: 6px #225e4e solid;
+            border-right: 5px solid transparent;
+        }
+
+        .musucType.row i::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: -8px;
+            border-left: 7px solid transparent;
+            border-bottom: 8px #ffffff solid;
+            border-right: 7px solid transparent;
         }
 
         .musucType.ran span {
@@ -247,26 +298,77 @@
         .b-wrap {
             display: flex;
             align-items: center;
+            justify-content: space-around;
         }
 
         .music-name {
-            flex: 1;
+            height: 30px;
+            text-align: center;
             color: #3ba187;
-            margin: 0 8px;
+            overflow: hidden;
+            line-height: 30px;
+            margin: 0 8px 30px;
+        }
+
+        .leftBtn::before {
+            position: absolute;
+            top: 10px;
+            left: 18px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-right: 13px solid #225e4e;
+            border-bottom: 12px solid transparent;
+            border-radius: 6px/4px;
+        }
+
+        .leftBtn::after {
+            position: absolute;
+            top: 12px;
+            left: 14px;
+            content: '';
+            height: 20px;
+            width: 4px;
+            background: #225e4e;
+            border-radius: 3px;
+        }
+
+        .rightBtn::before {
+            position: absolute;
+            top: 10px;
+            left: 14px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-left: 13px solid #225e4e;
+            border-bottom: 12px solid transparent;
+            border-radius: 6px/4px;
+        }
+
+        .rightBtn::after {
+            position: absolute;
+            top: 12px;
+            left: 28px;
+            content: '';
+            height: 20px;
+            width: 4px;
+            background: #225e4e;
+            border-radius: 3px;
         }
     </style>
 </head>
 
 <body>
-
-    
-    <div class="musiclist" id="musiclist">
-    </div>
+    <div class="musiclist" id="musiclist"></div>
+    <div class="music-name" id="music-name"></div>
     <div class="b-wrap">
+        <div class="leftBtn" id="leftBtn" onclick="nextOrPrev(1)"></div>
         <div class="wrap" id="wrap">
             <p id="operateBtn" class="stop" onclick="operate()"></p>
         </div>
-        <div class="music-name" id="music-name"></div>
+        <div class="rightBtn" id="rightBtn" onclick="nextOrPrev()"></div>
         <div class="musucType row" id="musucType" onclick="setMusicType()">
             <span>1</span><i></i>
         </div>
@@ -330,6 +432,50 @@
             { id: 50, name: '人间烟火-程响', type: 1 },
             { id: 51, name: '生如夏花-朴树', type: 1 },
             { id: 52, name: '像风一样自由-许巍', type: 1 },
+            { id: 53, name: 'Bar Bar Bar-Crayon Pop', type: 1 },
+            { id: 54, name: 'Big Big World-Emilia', type: 1 },
+            { id: 55, name: 'Burning-Maria Arredondo', type: 1 },
+            { id: 56, name: 'DONT PUSH ME-Sweetbox', type: 1 },
+            { id: 57, name: 'Gee-少女时代', type: 1 },
+            { id: 58, name: 'God is A Girl-Groove Coverage', type: 1 },
+            { id: 59, name: 'How Do You Do-beFour', type: 1 },
+            { id: 60, name: 'Trouble Is a Friend-Lenka', type: 1 },
+            { id: 61, name: 'เจอกับตัวเอง...ถึงรู้-Sara Nusara Poongprasert', type: 1 },
+            { id: 62, name: '爱转角-罗志祥', type: 1 },
+            { id: 63, name: '北京北京-汪峰', type: 1 },
+            { id: 64, name: '被风吹过的夏天-林俊杰', type: 1 },
+            { id: 65, name: '그 남자의 거짓말-泰仁', type: 1 },
+            { id: 66, name: '断桥残雪-许嵩', type: 1 },
+            { id: 67, name: '风往北吹-孙楠', type: 1 },
+            { id: 68, name: '浮夸-陈奕迅', type: 1 },
+            { id: 69, name: '富士山下-陈奕迅', type: 1 },
+            { id: 70, name: '红色高跟鞋-蔡健雅', type: 1 },
+            { id: 71, name: '画心-张靓颖', type: 1 },
+            { id: 72, name: '今世今世-张杰', type: 1 },
+            { id: 73, name: '开往早晨的午夜-张碧晨', type: 1 },
+            { id: 74, name: '兰花指-阿里郎', type: 1 },
+            { id: 75, name: '冷酷到底-羽泉', type: 1 },
+            { id: 76, name: '龙的传人-王力宏', type: 1 },
+            { id: 77, name: '梦一场-那英', type: 1 },
+            { id: 78, name: '暖暖-纯音版', type: 1 },
+            { id: 79, name: '偏爱-张芸京', type: 1 },
+            { id: 80, name: '飘洋过海来看你-梁静茹', type: 1 },
+            { id: 81, name: '起风了-买辣椒也用券', type: 1 },
+            { id: 82, name: '让泪化作相思雨-南合文斗', type: 1 },
+            { id: 83, name: '手放开-李圣杰', type: 1 },
+            { id: 84, name: '素颜-汪苏泷', type: 1 },
+            { id: 85, name: '岁月神偷-金玟岐', type: 1 },
+            { id: 86, name: '悟空-戴荃', type: 1 },
+            { id: 87, name: '相见恨晚-彭佳慧', type: 1 },
+            { id: 88, name: '相约一九九八-那英', type: 1 },
+            { id: 89, name: '摇摆-蔡妍', type: 1 },
+            { id: 90, name: '夜空中最亮的星-逃跑计划', type: 1 },
+            { id: 91, name: '隐形的翅膀-张韶涵', type: 1 },
+            { id: 92, name: '有没有人告诉你-陈楚生', type: 1 },
+            { id: 93, name: '月亮惹的祸-张宇', type: 1 },
+            { id: 94, name: '拯救-孙楠', type: 1 },
+            { id: 95, name: '불꽃-高耀太', type: 1 },
+            { id: 96, name: '운명-Why', type: 1 },
         ];
         const audioObj = {
             audioStatus: 0,//0 停止   1 播放；
@@ -375,13 +521,24 @@
         }
         // 音乐结束后
         audio.addEventListener("ended", function () {
+            nextOrPrev()
+        }, false);
+        // 下一曲或者上一曲 或者播放结束后的处理
+        function nextOrPrev(type) {
             audioObj.audioStatus = 0;
             audioObj.currentTime = 0;
             operateBtn.className = 'stop';
             if (audioObj.playType == 0) {
-                audioObj.auID += 1;
-                if (audioObj.auID == list.length) {
-                    audioObj.auID = 1;
+                if (type) {
+                    audioObj.auID -= 1;
+                    if (audioObj.auID == 0) {
+                        audioObj.auID = list.length;
+                    }
+                } else {
+                    audioObj.auID += 1;
+                    if (audioObj.auID > list.length) {
+                        audioObj.auID = 1;
+                    }
                 }
             } else if (audioObj.playType == 1) {
                 audioObj.auID = getRNum(1, (list.length - 1));
@@ -389,7 +546,7 @@
                 audioObj.auID = audioObj.auID;
             }
             operate();
-        }, false);
+        }
         // 随机函数
         function getRNum(max, min) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -419,6 +576,7 @@
             listBtn.classList.remove('open');
             audioObj.open = false;
         })
+        // 切换播放类型 单曲 列表 随机
         const musucType = document.getElementById('musucType');
         function setMusicType() {
             audioObj.tabsClass++;
@@ -431,10 +589,6 @@
                 musucType.classList = ['musucType one'];
             }
         }
-
-
-
-
     </script>
 </body>
 
