@@ -32,7 +32,11 @@
             position: relative;
             will-change: background;
             display: inline-block;
-            box-shadow: 6px 6px 10px 0 #000, -5px -5px 11px #0f3027, 0 0 0 4px rgba(255, 255, 255, 0.1) inset;
+            /* 上面 */
+            /* box-shadow: 6px 6px 10px 0 #000, -5px -5px 11px #0f3027, 0 0 0 4px rgba(255, 255, 255, 0.1) inset; */
+            /* 下面 */
+            box-shadow: 6px 6px 10px 0 #181717, -5px -5px 11px #4ebb9d, 0 0 0 4px rgba(255, 255, 255, 0.1) inset;
+
         }
 
         .wrap p {
@@ -45,7 +49,10 @@
             top: 0;
             bottom: 0;
             border-radius: 50px;
-            background: #091814;
+            /* 上 */
+            /* background: #091814; */
+            /* 下 */
+            background: #2e8d73;
             cursor: pointer;
         }
 
@@ -57,7 +64,8 @@
             width: 5px;
             height: 20px;
             border-radius: 3px;
-            background-color: #225e4e;
+            /* background-color: #225e4e; */
+            background-color: #66dfbf;
         }
 
         .wrap p.play::before {
@@ -68,7 +76,8 @@
             width: 5px;
             height: 20px;
             border-radius: 3px;
-            background-color: #225e4e;
+            /* background-color: #225e4e; */
+            background-color: #66dfbf;
         }
 
         .wrap p.stop::before {
@@ -79,7 +88,8 @@
             width: 0;
             height: 0;
             border-top: 12px solid transparent;
-            border-left: 16px solid #225e4e;
+            /* border-left: 16px solid #225e4e; */
+            border-left: 16px solid #66dfbf;
             border-bottom: 12px solid transparent;
             border-radius: 6px/4px;
         }
@@ -170,14 +180,17 @@
             width: 46px;
             height: 46px;
             border-radius: 50px;
-            box-shadow: 6px 6px 10px 0 #000, -5px -5px 11px #0f3027, 6px 6px 5px 0 #07140f inset, -5px -5px 11px #0a221c inset;
+            /* 上面 */
+            /* box-shadow: 6px 6px 10px 0 #000, -5px -5px 11px #0f3027, 6px 6px 5px 0 #07140f inset, -5px -5px 11px #0a221c inset; */
             position: relative;
+            /* 下面 */
+            box-shadow: 6px 6px 10px 0 #181717, -5px -5px 11px #4ebb9d, 6px 6px 5px 0 #30745a inset, -5px -5px 11px #58a390 inset;
         }
 
         .musucType:active,
         .leftBtn:active,
         .rightBtn:active {
-            box-shadow: 6px 6px 10px 0 #000 inset, -5px -5px 11px #0f3027 inset;
+            box-shadow: 6px 6px 10px 0 #181717 inset, -5px -5px 11px #4ebb9d inset;
         }
 
         .musucType span {
@@ -189,13 +202,14 @@
             height: 12px;
             top: 14px;
             left: 11px;
-            border: 3px #225e4e solid;
+            /* border: 3px #225e4e solid; */
+            border: 3px #66dfbf solid;
             border-radius: 10px 0 10px 0;
             line-height: 11px;
             text-align: center;
             font-size: 13px;
             font-weight: bold;
-            color: #225e4e;
+            color: #66dfbf;
         }
 
         .musucType.row span {
@@ -204,7 +218,8 @@
             top: 11px;
             left: 12px;
             border-radius: 20px;
-            border: 3px #225e4e solid;
+            /* border: 3px #225e4e solid; */
+            border: 3px #66dfbf solid;
             font-size: 0;
         }
 
@@ -214,7 +229,8 @@
             top: 7px;
             right: -6px;
             border-left: 5px solid transparent;
-            border-top: 6px #225e4e solid;
+            /* border-top: 6px #225e4e solid; */
+            border-top: 6px #66dfbf solid;
             border-right: 5px solid transparent;
         }
 
@@ -224,7 +240,8 @@
             top: 7px;
             right: -8px;
             border-left: 7px solid transparent;
-            border-top: 8px #0a201a solid;
+            /* border-top: 8px #0a201a solid; */
+            border-top: 8px #328b73 solid;
             border-right: 7px solid transparent;
         }
 
@@ -245,7 +262,8 @@
             top: 5px;
             left: -6px;
             border-left: 5px solid transparent;
-            border-bottom: 6px #225e4e solid;
+            /* border-bottom: 6px #225e4e solid; */
+            border-bottom: 6px #66dfbf solid;
             border-right: 5px solid transparent;
         }
 
@@ -255,7 +273,8 @@
             top: 3px;
             left: -8px;
             border-left: 7px solid transparent;
-            border-bottom: 8px #07140f solid;
+            /* border-bottom: 8px #07140f solid; */
+            border-bottom: 8px #38876f solid;
             border-right: 7px solid transparent;
         }
 
@@ -265,7 +284,8 @@
             top: 15px;
             left: 20px;
             border-radius: 20px 0 0 20px;
-            border: 3px #225e4e solid;
+            /* border: 3px #225e4e solid; */
+            border: 3px #66dfbf solid;
             border-right: none;
             font-size: 0;
         }
@@ -276,7 +296,8 @@
             top: -6px;
             right: -2px;
             border-top: 5px solid transparent;
-            border-left: 6px #225e4e solid;
+            /* border-left: 6px #225e4e solid; */
+            border-left: 6px #66dfbf solid;
             border-bottom: 5px solid transparent;
         }
 
@@ -287,7 +308,8 @@
             top: 15px;
             left: 13px;
             border-radius: 0 20px 20px 0;
-            border: 3px #225e4e solid;
+            /* border: 3px #225e4e solid; */
+            border: 3px #66dfbf solid;
             border-left: none;
         }
 
@@ -297,11 +319,16 @@
             bottom: -6px;
             right: -2px;
             border-top: 5px solid transparent;
-            border-left: 6px #225e4e solid;
+            /* border-left: 6px #225e4e solid; */
+            border-left: 6px #66dfbf solid;
             border-bottom: 5px solid transparent;
         }
 
         .b-wrap {
+            position: fixed;
+            bottom: 30px;
+            width: 100%;
+            left: 0;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -324,7 +351,9 @@
             width: 0;
             height: 0;
             border-top: 12px solid transparent;
-            border-right: 13px solid #225e4e;
+            /* border-right: 13px solid #225e4e; */
+            border-right: 13px solid #66dfbf;
+
             border-bottom: 12px solid transparent;
             border-radius: 6px/4px;
         }
@@ -336,7 +365,8 @@
             content: '';
             height: 20px;
             width: 4px;
-            background: #225e4e;
+            /* background: #225e4e; */
+            background: #66dfbf;
             border-radius: 3px;
         }
 
@@ -348,7 +378,8 @@
             width: 0;
             height: 0;
             border-top: 12px solid transparent;
-            border-left: 13px solid #225e4e;
+            /* border-left: 13px solid #225e4e; */
+            border-left: 13px solid #66dfbf;
             border-bottom: 12px solid transparent;
             border-radius: 6px/4px;
         }
@@ -360,7 +391,8 @@
             content: '';
             height: 20px;
             width: 4px;
-            background: #225e4e;
+            /* background: #225e4e; */
+            background: #66dfbf;
             border-radius: 3px;
         }
     </style>
@@ -370,14 +402,14 @@
     <div class="musiclist" id="musiclist"></div>
     <div class="music-name" id="music-name"></div>
     <div class="b-wrap">
+        <div class="musucType row" id="musucType" onclick="setMusicType()">
+            <span>1</span><i></i>
+        </div>
         <div class="leftBtn" id="leftBtn" onclick="nextOrPrev(1)"></div>
         <div class="wrap" id="wrap">
             <p id="operateBtn" class="stop" onclick="operate()"></p>
         </div>
         <div class="rightBtn" id="rightBtn" onclick="nextOrPrev()"></div>
-        <div class="musucType row" id="musucType" onclick="setMusicType()">
-            <span>1</span><i></i>
-        </div>
     </div>
     <script>
         const wrap = document.getElementById('wrap');
@@ -536,7 +568,8 @@
                 audio.addEventListener("timeupdate", function () {
                     audioObj.currentTime = audio.currentTime;
                     let num = audio.currentTime / audio.duration * 100;
-                    wrap.style.background = `conic-gradient(from -0deg, #225e4e 0% ${num}%, transparent ${num + 0.1}% 100%)`;
+                    // wrap.style.background = `conic-gradient(from -0deg, #225e4e 0% ${num}%, transparent ${num + 0.1}% 100%)`;
+                    wrap.style.background = `conic-gradient(from -0deg, #66dfbf 0% ${num}%, transparent ${num + 0.1}% 100%)`;
                 });
             }
         }
