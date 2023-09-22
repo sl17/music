@@ -11,6 +11,7 @@
             padding: 0;
             font-weight: 100;
             -webkit-tap-highlight-color: transparent;
+            user-select: none;
         }
 
         body,
@@ -31,7 +32,7 @@
             position: relative;
             will-change: background;
             display: inline-block;
-            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2) inset;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1) inset;
         }
 
         .wrap p {
@@ -44,7 +45,7 @@
             top: 0;
             bottom: 0;
             border-radius: 50px;
-            background: #fff;
+            background: #091814;
             cursor: pointer;
         }
 
@@ -169,9 +170,14 @@
             width: 46px;
             height: 46px;
             border-radius: 50px;
+            box-shadow: 6px 6px 10px 0 #000, -5px -5px 11px #0f3027, 6px 6px 5px 0 #07140f inset, -5px -5px 11px #0a221c inset;
             position: relative;
-            background-color: #fff;
-            position: relative;
+        }
+
+        .musucType:active,
+        .leftBtn:active,
+        .rightBtn:active {
+            box-shadow: 6px 6px 10px 0 #000 inset, -5px -5px 11px #0f3027 inset;
         }
 
         .musucType span {
@@ -218,7 +224,7 @@
             top: 7px;
             right: -8px;
             border-left: 7px solid transparent;
-            border-top: 8px #ffffff solid;
+            border-top: 8px #0a201a solid;
             border-right: 7px solid transparent;
         }
 
@@ -249,7 +255,7 @@
             top: 3px;
             left: -8px;
             border-left: 7px solid transparent;
-            border-bottom: 8px #ffffff solid;
+            border-bottom: 8px #07140f solid;
             border-right: 7px solid transparent;
         }
 
@@ -357,6 +363,8 @@
             background: #225e4e;
             border-radius: 3px;
         }
+
+        .leftBtn {}
     </style>
 </head>
 
@@ -515,7 +523,7 @@
                 audio.addEventListener("timeupdate", function () {
                     audioObj.currentTime = audio.currentTime;
                     let num = audio.currentTime / audio.duration * 100;
-                    wrap.style.background = `conic-gradient(from -0deg, #2b7764 0% ${num}%, transparent ${num + 0.1}% 100%)`;
+                    wrap.style.background = `conic-gradient(from -0deg, #225e4e 0% ${num}%, transparent ${num + 0.1}% 100%)`;
                 });
             }
         }
