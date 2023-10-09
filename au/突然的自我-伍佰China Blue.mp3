@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="keywords" content="美人鱼（翻自 fifi）-张巍巍,歌曲宝,歌曲搜索,音乐免费下载,MP3下载,收费音乐免费下载,付费音乐免费下载,在线mp3下载网站,歌曲免费下载工具">
+    <meta name="description"
+          content="美人鱼（翻自 fifi）-张巍巍.mp3免费在线下载播放,歌曲宝在线音乐搜索，可以在线免费下载全网MP3付费歌曲、流行音乐、经典老歌等。曲库完整，更新迅速，试听流畅，支持高品质|无损音质~">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="音乐MP3免费下载网站">
+    <meta name="application-name" content="音乐MP3免费下载网站">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>美人鱼（翻自 fifi）-张巍巍-mp3免费在线下载播放-歌曲宝-找歌就用歌曲宝-MP3音乐高品质在线免费下载</title>
+    <link href="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.6.1/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet"/>
+    <link href="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css"
+          type="text/css" rel="stylesheet"/>
+    <script src="//lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"
+            type="application/javascript"></script>
+    <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.6.1/js/bootstrap.min.js"
+            type="application/javascript"></script>
+    <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/layer/3.5.1/layer.min.js"
+            type="application/javascript"></script>
+        <meta property="og:image" content="https://img4.kuwo.cn/star/albumcover/120/25/29/4258538570.jpg"/>
+    <link href="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="//lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"
+            type="application/javascript"></script>
+    <style>
+        #ad-modal-body img {
+            width: 100%;
+        }
+
+        .content-lrc {
+            max-height: 4rem;
+            overflow: hidden;
+        }
+
+        .expand {
+            text-align: center;
+            cursor: pointer;
+            color: #009688;
+        }
+
+        .height-auto {
+            max-height: unset;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="max-width: 900px">
+    <header class="mb-3 mt-2">
+    <div class="text-center">
+        <div class="d-inline-block">
+            <a href="/" class=""><img src="/static/img/logo.png" class="align-bottom" style="height:3rem" alt="logo"></a>
+            <a class="font-weight-bolder h2 text-dark" href="/">歌曲宝</a>
+        </div>
+        <div class="d-inline-block">
+            <a class="text-muted font-weight-bold" href="/">&nbsp;gequbao.com</a>
+            <p class="px-1"
+               style="background: #FF5722;color: white;font-size: smaller; font-weight: bolder;width: fit-content;letter-spacing: 3px;border-radius: 10px"
+               title="slogan">找歌就用歌曲宝</p>
+        </div>
+
+
+    </div>
+</header>
+        <p><a href="/product/show?pid=1" rel="nofollow"> <em class="fa fa-bullhorn"> </em> 精选2800首无损歌曲U盘99元限时秒杀中~</a></p>
+
+    
+    <div id="aplayer"></div>
+    
+    <div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <h1 id="music-title" class="card-title text-center"
+                style="font-size:larger; overflow: hidden; text-overflow: ellipsis;">
+                <span class="badge badge-pill badge-info">美人鱼（翻自 fifi） - 张巍巍</span>
+            </h1>
+
+            
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <i class="fa fa-music input-group-text"></i>
+                </div>
+                <span class="form-control bg-light overflow-hidden">
+                   美人鱼（翻自 fifi）-张巍巍.mp3
+                </span>
+                <div class="input-group-append">
+                    <a id="btn-download-mp3" class="btn btn-primary" target="_blank">
+                        <i class="fa fa-download"></i>
+                        下载歌曲</a>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <i class="fa fa-file-text-o input-group-text"></i>
+                </div>
+                <span class="form-control bg-light overflow-hidden">
+                    [00:00.000] 作词 : fifi
+[00:00.551] 作曲 : fifi
+[0...
+                </span>
+                <div class="input-group-append">
+                    <a id="btn-download-lrc" href="/download/lrc/163" class="btn btn-primary"
+                       target="_blank"><i class="fa fa-download"></i> 下载歌词</a>
+                </div>
+            </div>
+                            <div class="content-lrc mt-1">[00:00.000] 作词 : fifi<br />
+[00:00.551] 作曲 : fifi<br />
+[00:01.103]只要你在我身边<br />
+[00:03.102]所有蜚语流言<br />
+[00:04.107]完全视而不见<br />
+[00:06.108]请不要匆匆一面<br />
+[00:08.108]一转身就沉入 海平线<br />
+[00:14.101]传说中你为爱甘心被搁浅<br />
+[00:19.109]我也可以为你潜入海里面<br />
+[00:24.109]怎么忍心断绝<br />
+[00:27.109]忘记我不变的誓言<br />
+[00:30.101]我眼泪断了线<br />
+[00:35.108]现实里有了我对你的眷恋<br />
+[00:40.101]我愿意化作雕像等你出现<br />
+[00:45.104]再见再也不见<br />
+[00:48.100]心碎了飘荡在海边<br />
+[00:52.104]你抬头就看见<br />
+[01:25.107]你 你抬头就看见</div>
+                <div class="expand" data-status="up">展开</div>
+                    </div>
+        <div class="card-footer" id="download-log">
+            <div style="overflow:hidden;height:1rem;line-height: 1rem;">
+                <ul class="list-group">
+                                            <li>
+                            <a href="/s/Elektronomia - Sky High (高空)" title="Elektronomia - Sky High (高空)" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客d080c0刚刚搜索了
+                                </span>
+                                Elektronomia - Sky High (高空)
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/青衣新版琪大妈" title="青衣新版琪大妈" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客d080c0刚刚搜索了
+                                </span>
+                                青衣新版琪大妈
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/皮尔金特第一组曲" title="皮尔金特第一组曲" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客d080c0刚刚搜索了
+                                </span>
+                                皮尔金特第一组曲
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/2902562" title="阳光开朗大男孩 - 卦者灵风" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客8d5405刚刚下载了
+                                </span>
+                                阳光开朗大男孩 - 卦者灵风
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/蒋调" title="蒋调" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客d080c0刚刚搜索了
+                                </span>
+                                蒋调
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/3695819" title="远大理想 - 红红肖" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客0578a2刚刚下载了
+                                </span>
+                                远大理想 - 红红肖
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/护花使者" title="护花使者" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客a87bb8刚刚搜索了
+                                </span>
+                                护花使者
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/72965" title="傻女 (Live) - 李克勤" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客04bed1刚刚下载了
+                                </span>
+                                傻女 (Live) - 李克勤
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/5317879" title="呼伦贝尔大草原 伴奏 - 齐旦布" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客82be10刚刚下载了
+                                </span>
+                                呼伦贝尔大草原 伴奏 - 齐旦布
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/lydia" title="lydia" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客c16ae7刚刚搜索了
+                                </span>
+                                lydia
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/2244120" title="志愿军战歌进行曲 - 中国人民解放军军乐团" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客dad0aa刚刚下载了
+                                </span>
+                                志愿军战歌进行曲 - 中国人民解放军军乐团
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/Francois-Joel Thiollier" title="Francois-Joel Thiollier" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客6e191d刚刚搜索了
+                                </span>
+                                Francois-Joel Thiollier
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/于冬然i" title="于冬然i" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客d080c0刚刚搜索了
+                                </span>
+                                于冬然i
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/秒针" title="秒针" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客d8df1e刚刚搜索了
+                                </span>
+                                秒针
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/s/无名音乐网" title="无名音乐网" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客32bd58刚刚搜索了
+                                </span>
+                                无名音乐网
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/9198260" title="Take a Ride(Put &#039;Em in the Air) - Eric Saade" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客ba5ec3刚刚下载了
+                                </span>
+                                Take a Ride(Put &#039;Em in the Air) - Eric Saade
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/2809536" title="秒针（DJ热播版） - DJRE" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客105b4b刚刚下载了
+                                </span>
+                                秒针（DJ热播版） - DJRE
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/9198260" title="Take a Ride(Put &#039;Em in the Air) - Eric Saade" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客ba5ec3刚刚下载了
+                                </span>
+                                Take a Ride(Put &#039;Em in the Air) - Eric Saade
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/325" title="稻香 - 周杰伦" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客0a6b59刚刚下载了
+                                </span>
+                                稻香 - 周杰伦
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/music/9198260" title="Take a Ride(Put &#039;Em in the Air) - Eric Saade" style="font-size: small"
+                               target="_blank">
+                                <span class="text-muted">
+                                    游客ba5ec3刚刚下载了
+                                </span>
+                                Take a Ride(Put &#039;Em in the Air) - Eric Saade
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="ad-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title badge bg-warning text-white" id="exampleModalLongTitle">温馨提示</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="ad-modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <hr>
+    
+        
+    
+    
+    <script type="text/javascript">
+        $(function () {
+            const url = 'https://lw-sycdn.kuwo.cn/67548e0962b4f152e0b27c87d4a209d7/6523842e/resource/30106/trackmedia/M5000010YCPX0OJWj0.mp3?bitrate$128&amp;format$mp3&amp;type$convert_url2'.replace(new RegExp('&amp;', 'g'), "&");
+            const ap = new APlayer({
+                container: document.getElementById('aplayer'),
+                autoplay: false,
+                theme: '#0e90d2',
+                lrcType: 1,
+                preload: 'none',
+                // loop: 'none',
+                order: 'list',
+            });
+            ap.on('listswitch', function () {
+                layer.tips('点击这里播放', '.aplayer-button', {
+                    tips: [3, '#FF5722'],
+                });
+            });
+            
+                        
+            $('#btn-download-mp3').attr('href', 'http://lw-sycdn.kuwo.cn/67548e0962b4f152e0b27c87d4a209d7/6523842e/resource/30106/trackmedia/M5000010YCPX0OJWj0.mp3?bitrate$128&amp;format$mp3&amp;type$convert_url2');
+            
+            var name = '美人鱼（翻自 fifi）' + '-' + '张巍巍';
+            $('#btn-download-mp3').attr('download', name + '.mp3');
+            $('#btn-download-lrc').attr('download', name + '.lrc');
+            var is_error = false;
+            ap.on('error', function () {
+                is_error = true;
+                console.log(ap.audio.currentSrc)
+                $.post('/api/err_music', {id: 163});
+            });
+            
+            
+                        
+            $('#btn-download-mp3').click(function () {
+                
+                                
+                //
+                if (is_error) {
+                    layer.msg('当前歌曲解析出错，暂不能下载', {offset: '100px', icon: 0});
+                    return false;
+                }
+                                                        
+                if (is_qq_wx_tb()) {
+                    return false;
+                }
+                
+                $.post("/api/download_log",
+                    {
+                        music_id: '163'
+                    });
+
+            });
+            
+            ap.list.add([{
+                name: '美人鱼（翻自 fifi）',
+                artist: '张巍巍',
+                url: url,
+                cover: 'https://img4.kuwo.cn/star/albumcover/120/25/29/4258538570.jpg',
+                lrc: '"[00:00.000] \u4f5c\u8bcd : fifi\n[00:00.551] \u4f5c\u66f2 : fifi\n[00:01.103]\u53ea\u8981\u4f60\u5728\u6211\u8eab\u8fb9\n[00:03.102]\u6240\u6709\u871a\u8bed\u6d41\u8a00\n[00:04.107]\u5b8c\u5168\u89c6\u800c\u4e0d\u89c1\n[00:06.108]\u8bf7\u4e0d\u8981\u5306\u5306\u4e00\u9762\n[00:08.108]\u4e00\u8f6c\u8eab\u5c31\u6c89\u5165 \u6d77\u5e73\u7ebf\n[00:14.101]\u4f20\u8bf4\u4e2d\u4f60\u4e3a\u7231\u7518\u5fc3\u88ab\u6401\u6d45\n[00:19.109]\u6211\u4e5f\u53ef\u4ee5\u4e3a\u4f60\u6f5c\u5165\u6d77\u91cc\u9762\n[00:24.109]\u600e\u4e48\u5fcd\u5fc3\u65ad\u7edd\n[00:27.109]\u5fd8\u8bb0\u6211\u4e0d\u53d8\u7684\u8a93\u8a00\n[00:30.101]\u6211\u773c\u6cea\u65ad\u4e86\u7ebf\n[00:35.108]\u73b0\u5b9e\u91cc\u6709\u4e86\u6211\u5bf9\u4f60\u7684\u7737\u604b\n[00:40.101]\u6211\u613f\u610f\u5316\u4f5c\u96d5\u50cf\u7b49\u4f60\u51fa\u73b0\n[00:45.104]\u518d\u89c1\u518d\u4e5f\u4e0d\u89c1\n[00:48.100]\u5fc3\u788e\u4e86\u98d8\u8361\u5728\u6d77\u8fb9\n[00:52.104]\u4f60\u62ac\u5934\u5c31\u770b\u89c1\n[01:25.107]\u4f60 \u4f60\u62ac\u5934\u5c31\u770b\u89c1\n"',
+            }]);
+            
+            $('.expand').click(function () {
+                if ($(this).attr('data-status') === 'up') {
+                    $('.content-lrc').addClass('height-auto');
+                    $(this).attr('data-status', 'down')
+                    $(this).text('收起')
+                } else {
+                    $('.content-lrc').removeClass('height-auto');
+                    $(this).attr('data-status', 'up')
+                    $(this).text('展开')
+                }
+            });
+
+            
+            setTimeout('autoScroll("#download-log")', 3500);
+        });
+        
+        function is_qq_wx_tb() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger\/[0-9]/i)) {
+                layer.msg("微信进入的用户请换用系统自带浏览器重新打开本站才能进行歌曲下载", {offset: '100px', icon: 7});
+                return true;
+            }
+
+            if (ua.match(/QQ\/[0-9]/i)) {
+                layer.msg("QQ进入的用户请换用系统自带浏览器重新打开本站才能进行歌曲下载", {offset: '100px', icon: 7});
+                return true;
+            }
+
+            if (ua.match(/tieba\/[0-9]/i)) {
+                layer.msg("百度贴吧进入的用户请换用系统自带浏览器重新打开本站才能进行歌曲下载", {
+                    offset: '100px',
+                    icon: 7
+                });
+                return true;
+            }
+            return false;
+        }
+        
+        function autoScroll(obj) {
+            $(obj).find("ul").animate({
+                    marginTop: "-1rem"
+                },
+                1000,
+                function () {
+                    $(this).css({
+                        marginTop: "0"
+                    }).find("li:first").appendTo(this);
+                    setTimeout('autoScroll("#download-log")', 3500);
+                });
+        }
+    </script>
+    <p><a id="kq-ad" href="/goto?u=http%3A%2F%2Fdown.kanqiu01.com%2F%3Fagent%3Dgequbao%26app%3Dgequbaoapp&amp;t=1" rel="nofollow"><img style="width: 100%; max-height: 135px;" src="https://lyzz.top/file/41699" alt="广告图片" /></a></p>
+<div>
+<style>
+    @media (max-width: 576px) {
+        #kq-ad {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1030;
+        }
+
+        footer {
+            margin-bottom: 5rem;
+        }
+    }
+</style>
+</div>
+
+</div>
+
+
+<footer class="bg-dark text-white text-center fixed-footer mt-3" style="line-height: 1.5rem;">
+    <a href="javascript:void(0)" class="text-white" id="swhz"><u>商务合作</u></a>
+    <a href="#" class="text-white" data-toggle="modal" data-target="#feedbackModal"><u>反馈建议</u></a>
+    <a href="javascript:void(0)" class="text-white" id="mzsm"><u>免责声明</u></a>
+    <br>
+    <a href="/" class="text-white">歌曲宝 - gequbao.com</a>
+    © 2023
+    <span style="display: none">
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c2b69091f94cb4368f25c28fc7c2d28c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    </span>
+</footer>
+
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none;">
+                <h5 class="modal-title" id="feedbackModalLabel" style="color: #007bff;font-weight: bold;">意见反馈</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="feedbackType">反馈类型</label>
+                    <select class="form-control" id="feedbackType" required>
+                        <option value="" selected disabled>请选择反馈类型</option>
+                        <option value="function">功能建议（网站功能改进建议）</option>
+                        <option value="bug">错误反馈（使用过程中报错反馈）</option>
+                        <option value="music">歌曲收录（请提供歌手和歌名）</option>
+                    </select>
+                </div>
+                <div class="form-group" id="link-group" style="display: none">
+                    <label for="feedbackContact">错误链接</label>
+                    <input type="text" class="form-control" placeholder="输入出错的网址链接" id="link" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackContent">反馈内容</label>
+                    <textarea class="form-control" id="feedbackContent" rows="3" required
+                              style="resize: none;"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackContact">联系邮箱</label>
+                    <input type="text" class="form-control" id="feedbackContact" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="resetFormBtn" class="btn btn-secondary" style="margin-right: 10px">清空表单
+                </button>
+                <button type="button" id="submitFormBtn" class="btn btn-primary">提交反馈</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+        $('#resetFormBtn').click(function () {
+            $('#feedbackContent').val('');
+        });
+
+        $('#feedbackType').change(function () {
+            if ($(this).val() == "bug") {
+                $('#link-group').show();
+                $('#link').focus();
+            } else {
+                $('#link-group').hide();
+            }
+        });
+
+
+        $('#submitFormBtn').click(function () {
+            let fkjy_type = $.trim($('#feedbackType').val());
+            if (!fkjy_type) {
+                alert('请先选择反馈类型');
+                $('#feedbackType').focus();
+                return false;
+            }
+
+            let link = $.trim($('#link').val());
+            if (fkjy_type == "bug" && link.length < 1) {
+                alert('请输入报错的链接');
+                $('#link').focus();
+                return false;
+            }
+
+            let fkjy_content = $.trim($('#feedbackContent').val());
+            if (fkjy_content.length < 1) {
+                alert('请输入建议内容~');
+                $('#feedbackContent').focus();
+                return false;
+            }
+
+            let fkjy_contact = $.trim($('#feedbackContact').val());
+            if (fkjy_contact.length < 1) {
+                alert('请输入联系方式~');
+                $('#feedbackContact').focus();
+                return false;
+            }
+            if (fkjy_contact.indexOf('@') == -1) {
+                alert('联系邮箱格式不正确~');
+                $('#feedbackContact').focus();
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/api/fkjy",
+                data: {
+                    "content": "[" + fkjy_type + "] " + fkjy_content,
+                    "contact": fkjy_contact,
+                    "link": link
+                },
+                success: function (result) {
+                    alert(result);
+                    $('#feedbackModal').modal('hide')
+                },
+                error: function (e) {
+                    if (e.status == 429) {
+                        alert('提交太频繁，请稍后再试！')
+                        return;
+                    }
+                    alert('【提交出错】 ' + e.responseText)
+                }
+            });
+        });
+
+        $('#swhz').click(function () {
+            layer.alert("合作联系邮箱：cnbgm@outlook.com");
+        });
+
+        $('#mzsm').click(function () {
+            layer.alert("<h6>本站所有数据均系网友搜集自互联网后分享.<br><br>音频版权来自各网站,本站不提供任何音频存储和贩卖服务,旨在音乐交流分享.<br><br>如涉及侵权请联系我们删除.<br><br>联系邮箱：cnbgm@outlook.com</h6>");
+        });
+
+    });
+</script>
+
+
+
+    <script type="text/javascript">
+    // 百度自动推送
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+
+  //今日头条自动推送
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?9fcefb8d216cdb5ce65f079a99df8b17339a77d3bb435f7667d10dad9040c43630632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+
+
+
+</body>
+</html>
