@@ -545,6 +545,7 @@
             })
             let aObj = list.filter(item => item.id == audioObj.auID)[0];
             musucName.innerText = aObj.name;
+            document.title = aObj.name;
             const aType = { 1: '.mp3', 2: '.flac', 3: 'wav' }
             audio.src = audioObj.src + aObj.name + aType[aObj.type];
             audio.currentTime = id ? 0 : audioObj.currentTime;
