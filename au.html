@@ -395,7 +395,7 @@
         const operateBtn = document.getElementById('operateBtn');
         const musucName = document.getElementById('music-name');
         const audio = new Audio();
-        const list = [
+        const oldList = [
             { id: 1, name: 'In the eyes-江映东', type: 1 },
             { id: 2, name: 'そばにいるね-青山テルマ', type: 1 },
             { id: 3, name: '爱你-王心凌', type: 1 },
@@ -514,6 +514,7 @@
             { id: 116, name: '爱我的人和我爱的人-裘海正', type: 1 },
             { id: 117, name: '突然的自我-伍佰China Blue', type: 1 },
         ];
+        let list = JSON.parse(JSON.stringify(oldList));
         const audioObj = {
             audioStatus: 0,//0 停止   1 播放；
             currentTime: 0,//当前播放音乐时间
@@ -575,6 +576,7 @@
             audioObj.currentTime = 0;
             operateBtn.className = 'stop';
             if (audioObj.playType == 0) {
+                list = JSON.parse(JSON.stringify(oldList));
                 if (type) {
                     audioObj.auID -= 1;
                     if (audioObj.auID == 0) {
@@ -587,11 +589,20 @@
                     }
                 }
             } else if (audioObj.playType == 1) {
-                audioObj.auID = getRNum(1, (list.length - 1));
+                audioObj.auID = delRandomMusic();
             } else {
+                list = JSON.parse(JSON.stringify(oldList));
                 audioObj.auID = audioObj.auID;
             }
             operate();
+        }
+        // 随机并且删除当前随机的
+        function delRandomMusic() {
+            let len = list.length,
+                ran = getRNum(1, len - 1),
+                deleteIndex = list.findIndex(item => item.id === ran);
+            list.splice(deleteIndex, 1);
+            return list[ran] && list[ran].id;
         }
         // 随机函数
         function getRNum(max, min) {
